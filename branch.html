@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Sceut 香水介紹頁</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf7;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #4a4a4a;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #b07667;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    a {
+      color: #b07667;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* LOGO區 */
+    .logo-section {
+      text-align: center;
+    }
+
+    .logo-section img {
+      max-width: 160px;
+      margin-bottom: 15px;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .carousel-buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .carousel-buttons button {
+      background-color: #f0e3dc;
+      color: #333;
+      border: none;
+      padding: 8px 14px;
+      margin: 0 6px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-buttons button:hover {
+      background-color: #e4d0c8;
+    }
+
+    /* Instagram */
+    .insta {
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- LOGO 區塊 -->
+    <section class="section logo-section" id="logo">
+      <img src="sceutlogo.png" alt="Sceut Logo">
+      <h2>Sceut</h2>
+      <p>香氣，從這裡開始。</p>
+    </section>
+
+    <!-- 香水照片展示區 -->
+    <section class="section" id="gallery">
+      <h2>香水照片展示區</h2>
+      <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <img src="螢幕擷取畫面 2025-10-10 173502.png" alt="香水1">
+            <img src="Perfume2 (1).jpg" alt="香水2">
+      
+        </div>
+
+    </section>
+
+    
+
+    <!-- 香水介紹 -->
+    <section class="section" id="fragrance">
+      <h2>香水介紹</h2>
+      <ul>
+        <li><strong>Top Notes:</strong> 佛手柑</li>
+        <li><strong>Middle Notes:</strong> 茉莉、</li>
+        <li><strong>Base Notes:</strong> 琥珀、麝香</li>
+      </ul>
+      <p>這是一款輕盈明亮、帶有早晨陽光氣息的香水。前調以佛手柑的清爽柑橘香揭開序幕，微酸的果香宛如晨間第一縷陽光，喚醒沉睡的感官；中調轉為茉莉的溫柔花香，柔和不膩，如同潔白衣襟上若有似無的餘香。基底由細膩麝香收尾，與肌膚融合後散發淡雅餘韻。整體氛圍乾淨純粹，低調中藏著優雅與自信，如一位在風中靜靜微笑的女性，溫柔卻堅定。</p>
+    </section>
+
+    <!-- 品牌介紹 -->
+    <section class="section" id="brand">
+      <h2>品牌介紹</h2>Sholayered 是一個來自日本的香氛品牌，以「讓香氣成為生活中最貼近肌膚的層次」為理念，主打可疊擦、輕盈而純粹的香調。品牌名中的 “Layered” 意指香氣層層堆疊，如同日常情緒與記憶的流動，鼓勵每個人依照當下心情混搭出專屬的氣味風格。Sholayered 的香氛常融合皂感、綠茶、柚子、無花果等清新調性並以低調柔和的木質或麝香收尾，展現出自在、簡約、帶有靜謐美感的日式香氛哲學。
+</p>
+    </section>
+
+    <!-- IG 區塊 -->
+    <section class="section" id="social">
+      <h2>追蹤我們</h2>
+      <p class="insta">Follow us on Instagram: <a href="https://www.instagram.com/sceut_tw" target="_blank">@sceut_tw</a></p>
+    </section>
+
+    <!-- 回饋表單 -->
+    <section class="section" id="feedback">
+      <h2>回饋我們</h2>
+      <p>若您有任何建議或心得，歡迎至訂單系統中回饋，讓 Sceut 更加貼近您的感受。</p>
+    </section>
+
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    function moveSlide(step) {
+      const track = document.getElementById('carouselTrack');
+      const totalSlides = track.children.length;
+      currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+</body>
+</html>
+
+
+  </script>
+</body>
+</html>
